@@ -18,13 +18,13 @@
 // Settings
 // import your own `settings` here or
 // import and modify the default settings through
-@import "foundation/settings";
+@import "styles/vendor/foundation/settings";
 
 // Sass utilities
 @import '../node_modules/foundation-sites/scss/util/util';
 
 // Global variables and styles
-@import 'foundation/global';
+@import 'styles/vendor/foundation/global';
 
 // Components
 @import '../node_modules/foundation-sites/scss/grid/grid';
@@ -131,3 +131,7 @@
     @include foundation-prototype-classes;
 }
 }
+
+//Userstyle
+@import "styles/main";
+
