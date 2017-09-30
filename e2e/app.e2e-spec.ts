@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('my-foundation-app App', () => {
+describe('cas-fee-project2-playground App', () => {
   let page: AppPage;
 
   beforeEach(() => {
