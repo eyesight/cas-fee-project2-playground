@@ -1,20 +1,107 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-  </li>
-</ul>
+<app-header></app-header>
+
+<!--
+zum Testen: bitte löschen, wenn fertig erstellt
+-->
+<!--start content-->
+<div class="container-fluid zz-layout">
+  <div class="row justify-content-end zz-layout__row">
+    <div class="col-12 col-lg-12 col-xl-10 zz-mod-container">
+      <h1 class="zz-title">Dashboard</h1>
+      <div class="zz-mod-box zz-mod-box--first">
+        <div class="zz-mod-box__img-wrapper">
+          <img src="assets/img/dummy-portrait.png" alt="" class="zz-mod-box__img">
+        </div>
+        <p class="zz-mod-box__txt"><span class="zz-mod-box__txt-item zz-mod-box--bold">Vorname</span><span
+          class="zz-mod-box--line-right"></span><span
+          class="zz-mod-box__txt-item">Klasse XYZ</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-end zz-layout__row">
+    <div class="col-12 col-xl-5 col-lg-6 zz-mod-container">
+      <h1 class="zz-title zz-title--h2">Klassenliste</h1>
+      <div class="zz-mod-box">
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Heidi</li>
+          <li class="zz-mod-box__list-item">dfjsdkfjsdf</li>
+          <li class="zz-mod-box__list-item">Max</li>
+          <li class="zz-mod-box__list-item">NachnameEltern</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-small">icon</li>
+        </ul>
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Susi</li>
+          <li class="zz-mod-box__list-item">Hugentobler</li>
+          <li class="zz-mod-box__list-item">Hermann</li>
+          <li class="zz-mod-box__list-item">Hugentobler</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-small">icon</li>
+        </ul>
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-small">icon</li>
+        </ul>
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-small">icon</li>
+        </ul>
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-small">icon</li>
+        </ul>
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-small">icon</li>
+        </ul>
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item">Vorname</li>
+          <li class="zz-mod-box__list-item">Nachname</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-small">icon</li>
+        </ul>
+      </div>
+      <button class="zz-btn zz-btn--primary">
+        Nachricht an den Lehrer
+      </button>
+    </div>
+    <div class="col-12 col-xl-5 col-lg-6 zz-mod-container">
+      <h1 class="zz-title zz-title--h2">Nächste Termine</h1>
+      <div class="zz-mod-box">
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Datum</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-large">Terim-Beschreibung</li>
+        </ul>
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Datum</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-large">Terim-Beschreibung</li>
+        </ul>
+        <ul class="zz-mod-box__list-group">
+          <li class="zz-mod-box__list-item">Datum</li>
+          <li class="zz-mod-box__list-item zz-mod-box--list-item-large">Terim-Beschreibung</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-end zz-layout__row">
+    <div class="col-12 col-lg-12 col-xl-10 zz-mod-container">
+
+    </div>
+  </div>
+</div><!--End content-->
+<!--
+zum Testen: bitte löschen, wenn fertig erstellt
+-->
+<app-footer></app-footer>
 
