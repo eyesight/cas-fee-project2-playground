@@ -1,31 +1,19 @@
-/**
- * Created by awedag on 11.10.17.
- */
+import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './00_login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AppComponent } from './app.component';
+import { AuthGuard } from './_guards/auth.guards';
+import { RegistrationComponent } from './01_registration/registration.component';
 
-import { Routes } from '@angular/router';
 
+export const appRoutes: Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'login', component: LoginComponent, data: { title: 'Login' }},
+  { path: 'registration', component: RegistrationComponent, data: { title: 'Registration' }},
+  { path: 'home', component: HomeComponent, data: { title: 'Home' }, canActivate: [AuthGuard]},
 
-import { ChatComponent } from './30_chat/chat.component';
-
-/*
-export const ROUTES: Routes = [
-  { path: '', redirectTo: 'ChatComponent', pathMatch: 'full' },
-  { path: '30_chat', loadChildren: './30_chat#ChatComponent', data: { title: 'ClassList' } },
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
 ];
-*/
-/*
- export const ROUTES: Routes = [
- { path: '', redirectTo: 'home', pathMatch: 'full' },
- { path: 'home', component: HomeComponent, data: { title: 'Home' } },
- { path: '10_profile', loadChildren: './+todo-advanced-directive#TodoAdvancedDirectiveModule', data: { title: 'ClassList' } },
- {
- path: 'chat', loadChildren: './+todo-advanced-errorhandling#TodoAdvancedErrorhandlingModule',
- data: { title: 'Errorhandling' }
- },
- {
- path: 'chat', loadChildren: './+todo-advanced-errorhandling#TodoAdvancedErrorhandlingModule',
- data: { title: 'Errorhandling' }
- },
- { path: '**', component: NoContentComponent },
- ];
- */
+
+export const routing = RouterModule.forRoot(appRoutes);

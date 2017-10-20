@@ -1,6 +1,3 @@
-/**
- * Created by awedag on 12.10.17.
- */
 import { Component, OnInit } from '@angular/core';
 import { Klasse } from '../model/klasse.model';
 
