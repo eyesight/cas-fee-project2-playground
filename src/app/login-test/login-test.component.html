@@ -1,0 +1,38 @@
+<div class="row justify-content-center zz-layout__row">
+  <form name="form" [formGroup]="loginForm" novalidate (ngSubmit)="login()" class="zz-form">
+  <div class="form-row">
+    <div class="col-12 zz-form__group" [ngClass]="{ 'has-error': loginForm.invalid && !username.valid }"  >
+      <label class="zz-form__label" for="email">Benutzername</label>
+      <input id="email" class="zz-form__input" name="eMail" type="text" [(ngModel)]="model.username" formControlName="formUsername" #username placeholder="test (zum Testen)" >
+      <div *ngIf="loginForm.invalid && (loginForm.dirty || loginForm.touched)" class="help-block">Benutzername bitte eingeben</div>
+      <p>Form value: {{ loginForm.value | json }}</p>
+      <p>Form status: {{ loginForm.status | json }}</p>
+      <p>Form invalid: {{ loginForm.invalid | json }}</p>
+      <p>Form valid: {{ loginForm.valid | json }}</p>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-12 zz-form__group" [ngClass]="{ 'has-error': loginForm.invalid && !password.valid }" >
+      <label class="zz-form__label" for="password">Password</label>
+      <input id="password" class="zz-form__input" name="lastName" type="text" [(ngModel)]="model.password" formControlName="formPassword" #password placeholder="test (zum Testen)">
+      <div *ngIf="loginForm.invalid && (loginForm.dirty || loginForm.touched)" class="help-block">Password is required</div>
+      <p>Form value: {{ loginForm.value | json }}</p>
+      <p>Form status: {{ loginForm.status | json }}</p>
+      <p>Form invalid: {{ loginForm.invalid | json }}</p>
+      <p>Form valid: {{ loginForm.valid | json }}</p>
+      <p>Form dirty: {{ loginForm.dirty | json }}</p>
+      <p>Form touched: {{ loginForm.touched | json }}</p>
+      <p *ngIf="!loginForm.controls.formPassword.errors">Password</p>
+      <p *ngIf="!loginForm.controls.formUsername.errors">Username</p>
+      <p>value: {{ loginForm.controls }}</p>
+
+
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-12 zz-form__group zz-form__group--last">
+      <button type="submit" [disabled]="loading" class="zz-btn zz-btn--primary">Anmelden</button>
+    </div>
+  </div>
+</form>
+</div>

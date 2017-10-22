@@ -1,19 +1,24 @@
-import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './00_login/login.component';
+import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AppComponent } from './app.component';
+import { LoginComponent } from './00_login/login.component';
+import { LoginTestComponent } from './login-test/login-test.component';
 import { AuthGuard } from './_guards/auth.guards';
 import { RegistrationComponent } from './01_registration/registration.component';
+import { AppComponent } from './app.component';
 
 
-export const appRoutes: Routes = [
-  { path: '', component: HomeComponent},
+export const ROUTES: Routes = [
+
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, data: { title: 'Home' }, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent, data: { title: 'Login' }},
   { path: 'registration', component: RegistrationComponent, data: { title: 'Registration' }},
-  { path: 'home', component: HomeComponent, data: { title: 'Home' }, canActivate: [AuthGuard]},
+  { path: 'classlist', loadChildren: './20_classlist/classlist.module#ClasslistModule', data: {title: 'Klassenliste'} },
+  { path: 'chat',      loadChildren: './30_chat/chat.module#ChatModule', data: {title: 'Chat'} },
+  { path: 'logintest',  component: LoginTestComponent },
 
   // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'home' }
+
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
